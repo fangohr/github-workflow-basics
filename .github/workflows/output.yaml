@@ -5,8 +5,9 @@ on:
   push:
 
 jobs:
-  check:
+  call-basics-workflow:
     uses: fangohr/github-workflow-basics/.github/workflows/basic.yaml@basics
+  check-output-file:
     steps:
       - name: check output file exists
         run: |

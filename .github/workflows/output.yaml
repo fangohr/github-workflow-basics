@@ -8,6 +8,7 @@ jobs:
   call-basics-workflow:
     uses: fangohr/github-workflow-basics/.github/workflows/basic.yaml@main
   check-output-file:
+    runs-on: ubuntu-latest
     steps:
       - name: check output file exists
         run: |

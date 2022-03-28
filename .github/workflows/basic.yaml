@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: install python3
+      - name: install python dependencies
         run: |
           sudo apt-get update && sudo apt-get -y install \
             --no-install-recommends \
-            python3
-
-          if-no-files-found: error
+            python3-pytest
 
       - name: run program
         run: |

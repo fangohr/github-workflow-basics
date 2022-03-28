@@ -3,7 +3,7 @@ name: basics-workflow-name
 on:
   pull_request:
   push:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   basics:

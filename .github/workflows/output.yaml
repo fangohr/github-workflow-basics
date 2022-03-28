@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-basics-workflow:
-    uses: fangohr/github-workflow-basics/.github/workflows/basic.yaml@basics
+    uses: fangohr/github-workflow-basics/.github/workflows/basic.yaml@main
   check-output-file:
     steps:
       - name: check output file exists

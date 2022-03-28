@@ -1,0 +1,18 @@
+name: check-output--workflow-name
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  check:
+    uses: fangohr/github-workflow-basics/.github/workflows/basic.yaml@basics
+    steps:
+      - name: check output file exists
+        run: |
+          ls -l output.txt
+
+      - name: cat content of output file
+        run: |
+          cat output.txt
+

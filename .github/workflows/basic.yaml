@@ -1,0 +1,28 @@
+name: basics-workflow-name
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  basics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install python3
+        run: |
+          sudo apt-get update && sudo apt-get -y install \
+            --no-install-recommends \
+            python3
+
+          if-no-files-found: error
+
+      - name: run program
+        run: |
+            python3 hello.py
+
+      - name: create output capture file
+        run: |
+            python3 hello.py > output.txt
+
